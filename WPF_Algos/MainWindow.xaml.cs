@@ -33,7 +33,8 @@ namespace WPF_Algos
             //new SmallestSubstring().Run();
             //new MinimumWindowSubstring().Run();
             //new ClimbingStairs().Run();
-            new Sqrtx().Run();
+            //new Sqrtx().Run();
+            new BinarySearch().Run();
         }
     }
 }
