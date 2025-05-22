@@ -34,7 +34,9 @@ namespace WPF_Algos
             //new MinimumWindowSubstring().Run();
             //new ClimbingStairs().Run();
             //new Sqrtx().Run();
-            new BinarySearch().Run();
+            //new BinarySearch().Run();
+            new MergeSort().Run();
+
         }
     }
 }
