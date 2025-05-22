@@ -17,11 +17,12 @@ namespace WPF_Algos.Algorithms
 
         public void Run()
         {
-            //int[] nums = new int[] { 9, 2, 5, 1, 3, 10, 4, 15 };
-            int[] nums = new int[] { 5, 1, 1, 2, 0, 0 };
+            int[] nums = new int[] { 9, 2, 5, 1, 3, 10, 4, 15 };
+            int[] nums1 = new int[] { 5, 1, 1, 2, 0, 0 };
 
 
             int[] result = Merge_Sort(nums, right: nums.Length - 1);
+            int[] result2 = Merge_Sort(nums1, right: nums1.Length - 1);
         }
 
         public int[] Merge_Sort(int[] nums, int left = 0, int right = 0)
@@ -32,48 +33,15 @@ namespace WPF_Algos.Algorithms
             //2, 9, 5, 1
             //1, 2, 5, 9
 
-            if (right - left < 2)
-            {
-                return Sort(nums, left, right);
-            }
-
-            int[] mergedSortedLeft;
-            int[] mergedSortedRight;
+            if (right - left < 1)
+                return new int[] { nums[left] };
 
             //Dividing array into two
             int mid = (left + right) / 2;
 
-            mergedSortedLeft = Merge_Sort(nums, left, mid);
-            mergedSortedRight = Merge_Sort(nums, mid + 1, right);
-
-
             //Merging two divided arrays
-            int[] result = Merge(mergedSortedLeft, mergedSortedRight);
+            int[] result = Merge(Merge_Sort(nums, left, mid), Merge_Sort(nums, mid + 1, right));
 
-
-            return result;
-        }
-
-        public int[] Sort(int[] nums, int left, int right)
-        {
-            int[] result = new int[2];
-            if (right - left > 0)
-            {
-                if (nums[right] < nums[left])
-                {
-                    result[0] = nums[right];
-                    result[1] = nums[left];
-                }
-                else
-                {
-                    result[0] = nums[left];
-                    result[1] = nums[right];
-                }
-            }
-            else
-            {
-                return new int[] { nums[left] };
-            }
 
             return result;
         }
@@ -86,28 +54,30 @@ namespace WPF_Algos.Algorithms
             // 4 15
             int l = 0;
             int r = 0;
-            int count = 0;
+            int index = 0;
 
             int[] result = new int[left.Length + right.Length];
 
-            while (count < left.Length + right.Length)
+            while (l < left.Length && r < right.Length)
             {
-                if (l < left.Length && (r >= right.Length || left[l] <= right[r]))
+                if (left[l] <= right[r])
                 {
-                    result[count] = left[l];
-                    l++;
-
+                    result[index++] = left[l++];                    
                 }
-
-                else if (r < right.Length && (l >= left.Length || right[r] < left[l]))
+                else
                 {
+                    result[index++] = right[r++];                    
+                }                
+            }
 
-                    result[count] = right[r];
-                    r++;
+            while(l < left.Length)
+            {
+                result[index++] = left[l++];
+            }
 
-                }
-
-                count++;
+            while (r < right.Length)
+            {
+                result[index++] = right[r++];
             }
 
             return result;
