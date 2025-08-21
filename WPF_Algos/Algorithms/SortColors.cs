@@ -23,6 +23,7 @@ namespace WPF_Algos.Algorithms
         public void Run()
         {
             int[] nums = new int[] { 2, 0, 2, 1, 1, 0 };
+            //int[] nums = new int[] { 2, 0, 1};
             Sort(nums);
         }
         public void Sort(int[] nums)
@@ -30,26 +31,24 @@ namespace WPF_Algos.Algorithms
             int low = 0;
             int mid = 0;
             int high = nums.Length - 1;
-            int index = 0;
 
             while (mid <= high)
             {
-                if (nums[index] == 0)
+                if (nums[mid] == 0)
                 {
-                    Swap(nums, low, index);
+                    Swap(nums, low, mid);
                     low++;
-                }
-                else if (nums[index] == 1)
-                {
-                    Swap(nums, index, high - mid - low);
                     mid++;
                 }
-                else if (nums[index] == 2)
+                else if (nums[mid] == 1)
+                {                    
+                    mid++;
+                }
+                else if (nums[mid] == 2)
                 {
+                    Swap(nums, mid, high);
                     high--;
                 }
-                index++;
-
             }
         }
 
