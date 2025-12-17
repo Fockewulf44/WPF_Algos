@@ -36,7 +36,8 @@ namespace WPF_Algos
             //new Sqrtx().Run();
             //new BinarySearch().Run();
             //new MergeSort().Run();
-            new SortColors().Run();
+            //new SortColors().Run();
+            new LongestSubstring().Run();
 
         }
     }
