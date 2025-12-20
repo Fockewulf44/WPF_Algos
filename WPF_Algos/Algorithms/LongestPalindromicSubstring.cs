@@ -61,6 +61,5 @@ namespace WPF_Algos.Algorithms
                 end = right - 1;
             }
         }
-
     }
 }
