@@ -39,7 +39,8 @@ namespace WPF_Algos
             //new SortColors().Run();
             //new LongestSubstring().Run();
             //new LongestPalindromicSubstring().Run();
-            new NumberOfIslands().Run();
+            //new NumberOfIslands().Run();
+            new ValidAnagram().Run();
 
         }
     }
