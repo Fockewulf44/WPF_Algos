@@ -1,17 +1,9 @@
-﻿using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Xml;
-
-namespace WPF_Algos.Algorithms
+﻿namespace WPF_Algos.Algorithms
 {
     public class MinimumWindowSubstring
     {
+        //HARD
+
         //Given two strings s and t of lengths m and n respectively, return the minimum window
         //substring
         //of s such that every character in t(including duplicates) is included in the window.If there is no such substring, return the empty string "".
