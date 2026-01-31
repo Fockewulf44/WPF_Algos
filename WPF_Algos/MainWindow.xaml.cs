@@ -42,7 +42,8 @@ namespace WPF_Algos
             //new NumberOfIslands().Run();
             //new ValidAnagram().Run();
             //new LongestRepetativeCharReplac().Run();
-            new MinimumNumberOfFlips().Run();
+            //new MinimumNumberOfFlips().Run();
+            new MoveZeroes().Run();
 
         }
     }
