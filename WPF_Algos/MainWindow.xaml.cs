@@ -44,7 +44,8 @@ namespace WPF_Algos
             //new LongestRepetativeCharReplac().Run();
             //new MinimumNumberOfFlips().Run();
             //new MoveZeroes().Run();
-            new ProductOfArray_ExceptSelf().Run();
+            //new ProductOfArray_ExceptSelf().Run();
+            new SubarraySumEquals().Run();
 
         }
     }
