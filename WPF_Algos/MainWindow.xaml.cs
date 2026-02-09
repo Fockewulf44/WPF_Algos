@@ -45,7 +45,8 @@ namespace WPF_Algos
             //new MinimumNumberOfFlips().Run();
             //new MoveZeroes().Run();
             //new ProductOfArray_ExceptSelf().Run();
-            new SubarraySumEquals().Run();
+            //new SubarraySumEquals().Run();
+            new ContiguosArray().Run();
 
         }
     }
