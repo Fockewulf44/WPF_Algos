@@ -46,7 +46,9 @@ namespace WPF_Algos
             //new MoveZeroes().Run();
             //new ProductOfArray_ExceptSelf().Run();
             //new SubarraySumEquals().Run();
-            new ContiguosArray().Run();
+            //new ContiguosArray().Run();
+            //new Permutation().Run();
+            new FlattenNestedListIterator().Run();
 
         }
     }
